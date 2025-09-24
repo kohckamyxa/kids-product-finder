@@ -1,0 +1,9 @@
+beautifulsoup4
+Flask
+Flask-Cors
+googletrans==4.0.0-rc1
+requests
+selenium
+setuptools
+undetected-chromedriver
+webdriver-manager

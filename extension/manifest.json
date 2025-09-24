@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Nordic Product Finder",
+    "version": "1.0",
+    "description": "Finds baby and children's products available in your region.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "http://127.0.0.1:5000/"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png"
+      },
+      "default_title": "Find this product",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  }
